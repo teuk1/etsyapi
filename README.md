@@ -1,4 +1,4 @@
-# etsyapi
+# :: etsyapi :: Project for Etsy customers
 
 ## Presentation of the project
 
@@ -36,7 +36,7 @@ yarn test:e2e
 
 ### Lints and fixes files
 
-```
+```bash
 yarn lint
 ```
 
