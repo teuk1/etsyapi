@@ -8,9 +8,8 @@
         @keydown.enter.native="fetch()"
       ></b-input>
     </b-field>
-    <div>
-      {{ info }}
-    </div>
+    <br />
+    <div>{{ info }}</div>
   </section>
 </template>
 
@@ -30,9 +29,13 @@ export default {
   methods: {
     fetch() {
       axios
-        .get("http://localhost:8080/listings/active?api_key=" + this.keyValue)
+        .get(
+          "http://localhost:8080/listings/active?limit=1&offset=2&api_key=" +
+            this.keyValue
+        )
         .then(response => {
           console.log("++++ SUCCESS ++++");
+          console.log(response);
           this.info = response;
         })
         .catch(() => {
